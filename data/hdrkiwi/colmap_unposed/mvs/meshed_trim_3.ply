@@ -1,0 +1,25 @@
+ply
+format binary_little_endian 1.0
+comment Running Screened Poisson Reconstruction (Version 8.0)
+comment 	--in /home/dx/Research/psdr-cuda/realdata/hdrKiwi/colmap_unposed/mvs/fused.ply
+comment 	--depth 13
+comment 	--out /home/dx/Research/psdr-cuda/realdata/hdrKiwi/colmap_unposed/mvs/meshed_trim_3.ply
+comment 	--pointWeight 1.000000
+comment 	--density
+comment 	--color 32.000000
+comment #             Tree set in:       0.1 (s),     131.2 (MB)
+comment #      Constraints set in:       0.0 (s),     388.1 (MB)
+comment # Linear system solved in:       1.5 (s),     839.1 (MB)
+comment #        Got triangles in:       0.2 (s),     840.9 (MB)
+comment #             Total Solve:       1.8 (s),     840.9 (MB)
+element vertex 0
+property float x
+property float y
+property float z
+property float value
+property uchar red
+property uchar green
+property uchar blue
+element face 0
+property list uchar int vertex_indices
+end_header

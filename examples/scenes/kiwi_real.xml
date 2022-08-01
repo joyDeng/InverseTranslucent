@@ -1,0 +1,461 @@
+<?xml version="1.0"?>
+<scene version="0.2.1">
+    <integrator type="direct">
+        <integer name="emitter_samples" value="0"/>
+        <integer name="bsdf_samples" value="1"/>
+    </integrator>
+
+
+     <emitter type="point" id="point-light">
+        <rgb name='power' value='150000, 150000, 150000'/>
+        <transform name="to_world" id='light-transform'>
+			<!-- <translate x="-2.944557" y="48.8898" z="-41.4402"/> -->
+            <translate x="-2.944557" y="48.8898" z="-41.4402"/>
+		</transform>
+    </emitter>
+
+
+    <bsdf type="hetersub" id="opt">
+        <texture name="alpha" type="bitmap">
+            <string name="filename" value="../../../../data/textures/rough_init.exr" />
+        </texture>
+        <float name='eta' value='1.2029'/>
+        <rgb name='specular_reflectance' value='1.0, 1.0, 1.0'/>
+        
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../../data/textures/albedo_init.exr" />
+        </texture>
+        <rgb name="sigma_t" value='2.3218145,  2.3273377,  0.26335016'/>
+    </bsdf>
+
+
+    <shape type="obj" id="init">
+        <string name="filename" value="../../../../data/results/kiwi/kiwi_init.obj" />
+        <int name="layer_count" value="0" />
+        <float name="layer_depth" value="0.15" />
+         <transform name="to_world">
+            <rotate y="1" angle="45"/>
+            <translate y="6.0" x="0.3" z="-0.5"/>
+        </transform>
+        <ref id="opt" />
+    </shape>
+
+        <sensor type="perspective" id="sensor=0-0">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="2.8350489, 98.868300, 0.9857774" target="2.8058696359579196, 97.86884346912309, 0.9704662388713631" up="0.99784, 0.02822, -0.05922" />
+            </transform>
+            <film type="hdrfilm" id="film-0-0">
+                <integer name="width" value="436" />
+                <integer name="height" value="291" />
+                <string name="pixel_format" value="rgb" />
+                <rfilter type="box"/>
+            </film>
+            <sampler type="independent">
+                <integer name="sample_count" value="4" />
+            </sampler>
+        </sensor> 
+  <sensor type="perspective" id="sensor-soap_00001
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="5.914261520165206, 70.50714494081035, 66.43324240065756" target="5.852102807991802, 69.8124070184323, 65.71667034307313" up="0.9976003115283925, -0.021311238802965066, -0.06587449839761081" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00002
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="6.229279776476691, 4.1309519173533555, 92.72600026085522" target="6.163787505555136, 4.14801450389434, 91.72829307405637" up="0.9977707916714061, -0.011720348491981872, -0.06569688515174432" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00003
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-61.41774646598098, 4.290400392339096, 69.76857824439736" target="-60.75854004824276, 4.305754903894482, 69.01677299183017" up="0.751961924180018, -0.012923062561064994, 0.6590798578605839" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00004
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-93.0178805232148, 4.4825067794940425, 5.70155527932938" target="-92.02011568910623, 4.495803283107566, 5.636068343166717" up="0.06565429110156082, -0.012565779247196672, 0.9977633062264124" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00005
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="6.229279776476691, 4.1309519173533555, 92.72600026085522" target="6.163787505555136, 4.14801450389434, 91.72829307405637" up="0.9977707916714061, -0.011720348491981872, -0.06569688515174432" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00006
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-93.0178805232148, 4.4825067794940425, 5.70155527932938" target="-92.02011568910623, 4.495803283107566, 5.636068343166717" up="0.06565429110156082, -0.012565779247196672, 0.9977633062264124" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00007
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-70.06019243730509, 4.594737762641323, -61.94547548228039" target="-69.30833238776984, 4.606831878497592, -61.28626368151034" up="-0.6591224040667827, -0.010857790270031366, 0.7519572892443269" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00008
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-5.992984528246556, 4.561349953971726, -93.54580087455095" target="-5.9274447764776275, 4.573801644696316, -92.54802860778054" up="-0.9978038029873474, -0.008799612408008762, 0.06565163794952175" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00009
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="61.65404171421115, 4.4019014789859865, -70.5883788580931" target="60.99488277732029, 4.4160612446961744, -69.83650852555434" up="-0.7519949354959592, -0.0075968983389256405, -0.6591251050628066" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00010
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="93.25417577144495, 4.20979509183104, -6.521355893025131" target="92.25645841818377, 4.226012865483091, -6.4558038768909025" up="-0.06568730241750223, -0.007954181652793962, -0.9978085534286352" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00011
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="70.29648768553525, 4.09756410868376, 61.12567486858465" target="69.54467511684737, 4.114984270093066, 60.466528147786164" up="0.6590893927508412, -0.009662170629959268, -0.7520025364465498" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00012
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="58.91471146831826, 57.863086834181026, 49.855693674866366" target="58.28447525596191, 57.3039965093412, 49.3169726660824" up="0.65841598727409, -0.017157000826265357, -0.7524586533654408" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00013
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="77.17847683369592, 57.957632828621186, -6.346478238462177" target="76.35250792886144, 57.39752900462007, -6.282767371368293" up="-0.06647784075297751, -0.015450138481060548, -0.9976682764875996" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00014
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="50.351972919800474, 58.116896255497146, -59.00169179762058" target="49.81358375885936, 57.55508530011452, -58.373595020210296" up="-0.7524465849418178, -0.015094512875064385, -0.6584802901305854" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00015
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-5.850198111663067, 58.247582759334975, -77.26523702930555" target="-5.786155406048276, 57.68437105476116, -76.44140991899138" up="-0.9976590583106485, -0.016298444665142273, 0.06641358349168337" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00016
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-58.505566705275626, 58.2731379586056, -50.43857683381053" target="-57.877136427465096, 57.70965242690962, -49.90233114245229" up="-0.6584731196230601, -0.018356686936838704, 0.75238034449245" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00017
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-76.7693320706533, 58.17859196416545, 5.763595079518001" target="-75.94516910036465, 57.616119931630756, 5.6974088949983885" up="0.06642070840400739, -0.020063549282043514, 0.9975899676146088" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00018
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="6.259342874705679, 57.88864203345165, 76.68235387036141" target="6.193494234545066, 57.329277881489666, 75.85605144262152" up="0.9976019259616785, -0.019215243097961788, -0.06649189236467391" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00019
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="6.229279776476691, 4.1309519173533555, 92.72600026085522" target="6.163787505555136, 4.14801450389434, 91.72829307405637" up="0.9977707916714061, -0.011720348491981872, -0.06569688515174432" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00020
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-93.0178805232148, 4.4825067794940425, 5.70155527932938" target="-92.02011568910623, 4.495803283107566, 5.636068343166717" up="0.06565429110156082, -0.012565779247196672, 0.9977633062264124" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00021
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-70.06019243730509, 4.594737762641323, -61.94547548228039" target="-69.30833238776984, 4.606831878497592, -61.28626368151034" up="-0.6591224040667827, -0.010857790270031366, 0.7519572892443269" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00022
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-5.992984528246556, 4.561349953971726, -93.54580087455095" target="-5.9274447764776275, 4.573801644696316, -92.54802860778054" up="-0.9978038029873474, -0.008799612408008762, 0.06565163794952175" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00023
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="61.65404171421115, 4.4019014789859865, -70.5883788580931" target="60.99488277732029, 4.4160612446961744, -69.83650852555434" up="-0.7519949354959592, -0.0075968983389256405, -0.6591251050628066" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00024
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="93.25417577144495, 4.20979509183104, -6.521355893025131" target="92.25645841818377, 4.226012865483091, -6.4558038768909025" up="-0.06568730241750223, -0.007954181652793962, -0.9978085534286352" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00025
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="70.29648768553525, 4.09756410868376, 61.12567486858465" target="69.54467511684737, 4.114984270093066, 60.466528147786164" up="0.6590893927508412, -0.009662170629959268, -0.7520025364465498" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00026
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="58.91471146831826, 57.863086834181026, 49.855693674866366" target="58.28447525596191, 57.3039965093412, 49.3169726660824" up="0.65841598727409, -0.017157000826265357, -0.7524586533654408" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00027
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="77.17847683369592, 57.957632828621186, -6.346478238462177" target="76.35250792886144, 57.39752900462007, -6.282767371368293" up="-0.06647784075297751, -0.015450138481060548, -0.9976682764875996" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00028
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="50.351972919800474, 58.116896255497146, -59.00169179762058" target="49.81358375885936, 57.55508530011452, -58.373595020210296" up="-0.7524465849418178, -0.015094512875064385, -0.6584802901305854" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00029
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-5.850198111663067, 58.247582759334975, -77.26523702930555" target="-5.786155406048276, 57.68437105476116, -76.44140991899138" up="-0.9976590583106485, -0.016298444665142273, 0.06641358349168337" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00030
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-58.505566705275626, 58.2731379586056, -50.43857683381053" target="-57.877136427465096, 57.70965242690962, -49.90233114245229" up="-0.6584731196230601, -0.018356686936838704, 0.75238034449245" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00031
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-76.7693320706533, 58.17859196416545, 5.763595079518001" target="-75.94516910036465, 57.616119931630756, 5.6974088949983885" up="0.06642070840400739, -0.020063549282043514, 0.9975899676146088" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00032
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="6.259342874705679, 57.88864203345165, 76.68235387036141" target="6.193494234545066, 57.329277881489666, 75.85605144262152" up="0.9976019259616785, -0.019215243097961788, -0.06649189236467391" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00033
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="6.229279776476691, 4.1309519173533555, 92.72600026085522" target="6.163787505555136, 4.14801450389434, 91.72829307405637" up="0.9977707916714061, -0.011720348491981872, -0.06569688515174432" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00034
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-93.0178805232148, 4.4825067794940425, 5.70155527932938" target="-92.02011568910623, 4.495803283107566, 5.636068343166717" up="0.06565429110156082, -0.012565779247196672, 0.9977633062264124" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00035
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-70.06019243730509, 4.594737762641323, -61.94547548228039" target="-69.30833238776984, 4.606831878497592, -61.28626368151034" up="-0.6591224040667827, -0.010857790270031366, 0.7519572892443269" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00036
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-5.992984528246556, 4.561349953971726, -93.54580087455095" target="-5.9274447764776275, 4.573801644696316, -92.54802860778054" up="-0.9978038029873474, -0.008799612408008762, 0.06565163794952175" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00037
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="61.65404171421115, 4.4019014789859865, -70.5883788580931" target="60.99488277732029, 4.4160612446961744, -69.83650852555434" up="-0.7519949354959592, -0.0075968983389256405, -0.6591251050628066" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00038
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="93.25417577144495, 4.20979509183104, -6.521355893025131" target="92.25645841818377, 4.226012865483091, -6.4558038768909025" up="-0.06568730241750223, -0.007954181652793962, -0.9978085534286352" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00039
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="70.29648768553525, 4.09756410868376, 61.12567486858465" target="69.54467511684737, 4.114984270093066, 60.466528147786164" up="0.6590893927508412, -0.009662170629959268, -0.7520025364465498" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00040
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="58.91471146831826, 57.863086834181026, 49.855693674866366" target="58.28447525596191, 57.3039965093412, 49.3169726660824" up="0.65841598727409, -0.017157000826265357, -0.7524586533654408" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00041
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="77.17847683369592, 57.957632828621186, -6.346478238462177" target="76.35250792886144, 57.39752900462007, -6.282767371368293" up="-0.06647784075297751, -0.015450138481060548, -0.9976682764875996" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00042
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="50.351972919800474, 58.116896255497146, -59.00169179762058" target="49.81358375885936, 57.55508530011452, -58.373595020210296" up="-0.7524465849418178, -0.015094512875064385, -0.6584802901305854" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00043
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-5.850198111663067, 58.247582759334975, -77.26523702930555" target="-5.786155406048276, 57.68437105476116, -76.44140991899138" up="-0.9976590583106485, -0.016298444665142273, 0.06641358349168337" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00044
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-58.505566705275626, 58.2731379586056, -50.43857683381053" target="-57.877136427465096, 57.70965242690962, -49.90233114245229" up="-0.6584731196230601, -0.018356686936838704, 0.75238034449245" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00045
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="-76.7693320706533, 58.17859196416545, 5.763595079518001" target="-75.94516910036465, 57.616119931630756, 5.6974088949983885" up="0.06642070840400739, -0.020063549282043514, 0.9975899676146088" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00046
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="6.259342874705679, 57.88864203345165, 76.68235387036141" target="6.193494234545066, 57.329277881489666, 75.85605144262152" up="0.9976019259616785, -0.019215243097961788, -0.06649189236467391" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00047
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="4.457829895703712, 92.73787341619244, 32.755433161868545" target="4.411264435971933, 91.80447230869792, 32.39963261312253" up="0.9976890850250391, -0.025815216146589, -0.06284953649156828" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00048
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="4.457829895703712, 92.73787341619244, 32.755433161868545" target="4.411264435971933, 91.80447230869792, 32.39963261312253" up="0.9976890850250391, -0.025815216146589, -0.06284953649156828" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00049
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="4.457829895703712, 92.73787341619244, 32.755433161868545" target="4.411264435971933, 91.80447230869792, 32.39963261312253" up="0.9976890850250391, -0.025815216146589, -0.06284953649156828" />
+            </transform>
+            </sensor> 
+  <sensor type="perspective" id="sensor-soap_00050
+">
+            <string name="fov_axis" value="x" />
+            <float name="fov" value="10" />
+            <transform name="to_world">
+                <lookat origin="4.457829895703712, 92.73787341619244, 32.755433161868545" target="4.411264435971933, 91.80447230869792, 32.39963261312253" up="0.9976890850250391, -0.025815216146589, -0.06284953649156828" />
+            </transform>
+            </sensor> 
+ 
+ 
+</scene>

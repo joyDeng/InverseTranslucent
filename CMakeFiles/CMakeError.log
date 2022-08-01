@@ -1,0 +1,60 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/xd/Research/psdr-cuda/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ff2a3/fast && /usr/bin/make  -f CMakeFiles/cmTC_ff2a3.dir/build.make CMakeFiles/cmTC_ff2a3.dir/build
+make[1]: Entering directory '/home/xd/Research/psdr-cuda/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ff2a3.dir/src.c.o
+/usr/bin/gcc-9 -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_ff2a3.dir/src.c.o -c /home/xd/Research/psdr-cuda/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ff2a3
+/opt/cmake-3.20.1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff2a3.dir/link.txt --verbose=1
+/usr/bin/gcc-9 -fPIC  -rdynamic CMakeFiles/cmTC_ff2a3.dir/src.c.o -o cmTC_ff2a3 
+/usr/bin/ld: CMakeFiles/cmTC_ff2a3.dir/src.c.o: in function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ff2a3.dir/build.make:99: cmTC_ff2a3] Error 1
+make[1]: Leaving directory '/home/xd/Research/psdr-cuda/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_ff2a3/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/xd/Research/psdr-cuda/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5d365/fast && /usr/bin/make  -f CMakeFiles/cmTC_5d365.dir/build.make CMakeFiles/cmTC_5d365.dir/build
+make[1]: Entering directory '/home/xd/Research/psdr-cuda/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5d365.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-9   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_5d365.dir/CheckFunctionExists.c.o -c /opt/cmake-3.20.1-linux-x86_64/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5d365
+/opt/cmake-3.20.1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d365.dir/link.txt --verbose=1
+/usr/bin/gcc-9 -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_5d365.dir/CheckFunctionExists.c.o -o cmTC_5d365  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5d365.dir/build.make:99: cmTC_5d365] Error 1
+make[1]: Leaving directory '/home/xd/Research/psdr-cuda/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_5d365/fast] Error 2
+
+
+

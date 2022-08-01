@@ -1,0 +1,1 @@
+/usr/bin/g++-9  -O0 -g -Wall -g -rdynamic CMakeFiles/ptx.dir/cuda/psdr_cuda.cpp.o -o bin/ptx   -L/home/xd/Research/psdr-cuda/ext/enoki/build 
