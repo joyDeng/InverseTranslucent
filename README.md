@@ -26,5 +26,9 @@ To optimize homogeneous value of alebdo and sigma_t, use args.sigma_texture = 0
 To optimize alebdo and sigma_t as texture, use args.sigma_texture = 512 and args.albedo_texture = 512: 
 
 
+### Data Folder
+Find real data here [Soap and Kiwi](https://drive.google.com/drive/folders/1JrTtno7c-FnYuNJ044FKbjlZYujJiczN?usp=sharing).
+
+
 
 

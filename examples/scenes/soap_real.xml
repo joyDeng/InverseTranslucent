@@ -41,24 +41,20 @@
 
     <bsdf type="hetersub" id="ref">
         <texture name="alpha" type="bitmap">
-            <string name="filename" value="../../../../data/results/soap_real/rough.exr" />
+            <string name="filename" value="../textures/rough_init.exr" />
         </texture>
         <float name='alpha' value='0.15'/>
-        <!-- <rgb name='specular_prob' value='0.5'/> -->
         <rgb name='eta' value='1.3, 1.3, 1.3'/>
         <rgb name='specular_reflectance' value='1.0, 1.0, 1.0'/>
         
         <rgb name="sigma_t" value='3.3824356, 4.320124, 5.453843'/>
-        <!-- <rgb name="sigma_t" value='1.0, 1.0, 1.0'/> -->
-        <!-- <rgb name="albedo" value='0.5, 0.5, 0.5'/> -->
         <texture name="albedo" type="bitmap">
-            <string name="filename" value="../../../../data/results/soap_real/albedo.exr" />
+            <string name="filename" value="../textures/albedo_init.exr" />
         </texture>
     </bsdf>
 
     <shape type="obj" id="init">
-        <!-- <string name="filename" value="../../../../data/smoothshape/soap_init.obj" /> -->
-        <string name="filename" value="../../../../data/results/soap_real/mesh.obj" />
+        <string name="filename" value="../smoothshape/soap_init.obj" />
          <transform name="to_world">
             <scale y="0.9" />
             <rotate y="1" angle="-45"/>

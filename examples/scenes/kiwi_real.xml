@@ -17,20 +17,20 @@
 
     <bsdf type="hetersub" id="opt">
         <texture name="alpha" type="bitmap">
-            <string name="filename" value="../../../../data/textures/rough_init.exr" />
+            <string name="filename" value="../textures/rough_init.exr" />
         </texture>
         <float name='eta' value='1.2029'/>
         <rgb name='specular_reflectance' value='1.0, 1.0, 1.0'/>
         
         <texture name="albedo" type="bitmap">
-            <string name="filename" value="../../../../data/textures/albedo_init.exr" />
+            <string name="filename" value="../textures/albedo_init.exr" />
         </texture>
         <rgb name="sigma_t" value='2.3218145,  2.3273377,  0.26335016'/>
     </bsdf>
 
 
     <shape type="obj" id="init">
-        <string name="filename" value="../../../../data/results/kiwi/kiwi_init.obj" />
+        <string name="filename" value="../smoothshape/cube_3_init_uv.obj" />
         <int name="layer_count" value="0" />
         <float name="layer_depth" value="0.15" />
          <transform name="to_world">
