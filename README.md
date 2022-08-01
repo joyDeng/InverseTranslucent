@@ -3,6 +3,7 @@ Path-space differentiable renderer with bssrdf support.
 
 ## Integrator
 DirectIntegrator:
+
 DirectIntegrator with point light assumption, support gradient estimation of geometry with bssrdf material (both primary and secondary discontintuity).
 
 ColocateIntegrator:
@@ -16,10 +17,11 @@ This is the origin direct integrator in psdr-cuda, which support bsdf with MIS d
 
 ## Optimizing both geometry and texture
 
-The latest optimizing code is in learn_real_data.py
+The latest optimizing code is in "examples/python/learn_real_data.py"
 
-To set the ROOT_DIR, SCENE_DIR, etc... go to "script/constants.py"
-To optimize homogeneou value of alebdo and sigma_t, use args.sigma_texture = 0
+To set the ROOT_DIR, SCENE_DIR, etc... go to "examples/python/constants.py"
+
+To optimize homogeneous value of alebdo and sigma_t, use args.sigma_texture = 0
 
 To optimize alebdo and sigma_t as texture, use args.sigma_texture = 512 and args.albedo_texture = 512: 
 
