@@ -14,6 +14,7 @@ Here are several integrators implemented in this framework, the one we used for 
 
 
 ## Optimizing
+#### Synthetic data 
 To do: adding sythetic examples ... 
 
 #### Real data 
