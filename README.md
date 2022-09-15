@@ -10,28 +10,8 @@ The material we use in reconstructing is `HeterSub`, the definition and implemen
 
 ## Integrators
 
-Here are several integrators implemented in this framework, the one we used for reconstruction is the `DirectIntegrator`; the `OldDirectIntegrator` correspond to the `DirectIntegrator` in the original psdr-cuda codebase.
+Here are several integrators implemented in this framework, the one we used for reconstruction is the `DirectIntegrator`, it is a direct light integrator with point light assumption, support gradient estimation of geometry with bssrdf material (both primary and secondary discontintuity). The `OldDirectIntegrator` correspond to the `DirectIntegrator` in the original psdr-cuda codebase; and the `ColocateIntegrator` is integrator with the "point light locates at the same place as camera" assumpition. To validate the implementation of BSSRDF we used the `LaserIntegrator`, where a directional coherent light is pointing down to a plane, it is deprecated now.
 
-```c++
-DirectIntegrator
-```
-
-Direct integrator with point light assumption, support gradient estimation of geometry with bssrdf material (both primary and secondary discontintuity).
-
-```c++
-ColocateIntegrator
-```
-This is integrator with the "point light locates at the same place as camera" assumpition.
-
-```c++
-LaserIntegrator
-```
-This is only used in bssrdf validation, where a directional coherent light is pointing down to a plane. Deprecated.
-
-```c++
-OldDirectIntegrator
-```
-This is the origin direct integrator in psdr-cuda, which support bsdf with MIS direct lighting.
 
 ## Optimizing
 To do: adding sythetic examples ... 
