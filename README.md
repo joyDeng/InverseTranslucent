@@ -3,7 +3,7 @@ This is a path space differentiable renderer (psdr-cuda) with bssrdf support whi
 
 
 ## Compile
-To build the code, please follow this process [psdr-cuda](https://psdr-cuda.readthedocs.io/en/latest/core_compile.html)
+To build the code, please follow this process of [compiling psdr-cuda](https://psdr-cuda.readthedocs.io/en/latest/core_compile.html)
 
 ## Materials
 The material we use in reconstructing is `HeterSub`, the definition and implementation can be found in `hetersub.h` and `hetersub.cpp`, currently, it is using dipole model, one can switch to better diphole in the future. The expression of diphole model and better diphole model can be found in [this report](http://www.eugenedeon.com/wp-content/uploads/2014/04/betterdipole.pdf).
