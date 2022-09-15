@@ -1,5 +1,5 @@
 # psdr-cuda
-This is a path space differentiable renderer (psdr-cuda) with bssrdf support which forked from [psdr-cuda](https://psdr-cuda.readthedocs.io/en/latest/).
+This is a path space differentiable renderer (psdr-cuda) with bssrdf support which forked from [psdr-cuda](https://psdr-cuda.readthedocs.io/en/latest/). The derivation and experimental detail can be found in [paper](https://www.cs.cornell.edu/~xideng/pub/deng22dsss.pdf).
 
 
 ## Compile
