@@ -1,10 +1,16 @@
 # psdr-cuda
-Path-space differentiable renderer (psdr-cuda) with bssrdf support.
+This is a path space differentiable renderer (psdr-cuda) with bssrdf support which forked from [psdr-cuda](https://psdr-cuda.readthedocs.io/en/latest/).
+
 
 ## Compile
-To build the code, please follow the process from [psdr-cuda](https://psdr-cuda.readthedocs.io/en/latest/core_compile.html)
+To build the code, please follow this process [psdr-cuda](https://psdr-cuda.readthedocs.io/en/latest/core_compile.html)
 
-## Integrator
+## Materials
+The material we use in reconstructing is `HeterSub`, the definition and implementation can be found in `hetersub.h` and `hetersub.cpp`, currently, it is using dipole model, one can switch to better diphole in the future.
+
+## Integrators
+
+Here are several integrators implemented in this framework, the one we used for reconstruction is the `DirectIntegrator`; the `OldDirectIntegrator` correspond to the `DirectIntegrator` in the original psdr-cuda codebase.
 
 ```c++
 DirectIntegrator
