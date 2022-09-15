@@ -17,13 +17,13 @@ Here are several integrators implemented in this framework, the one we used for 
 To do: adding sythetic examples ... 
 
 #### Real data 
-1.The latest optimizing code is in `"examples/python/learn_real_data.py"`.
+1. The latest optimizing code is in `"examples/python/learn_real_data.py"`.
 
-2.To set the `ROOT_DIR`, `SCENE_DIR`, etc... go to `"examples/python/constants.py"`.
+2. To set the `ROOT_DIR`, `SCENE_DIR`, etc... go to `"examples/python/constants.py"`.
 
-3.To optimize homogeneous value of `alebdo` and `sigma_t`, set `args.sigma_texture = 0`.
+3. To optimize homogeneous value of `alebdo` and `sigma_t`, set `args.sigma_texture = 0`.
 
-4.To optimize `albedo` and `sigma_t` as texture, set `args.sigma_texture = 512` and `args.albedo_texture = 512`.
+4. To optimize `albedo` and `sigma_t` as texture, set `args.sigma_texture = 512` and `args.albedo_texture = 512`.
 
 
 ## Data Folder
