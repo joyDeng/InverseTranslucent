@@ -24,5 +24,5 @@ python3 ../learn_real_data.py \
         --albedo_texture 512 \
         --sigma_texture 0 \
         --rough_texture 512 \
-        --no_init "yes" \
+        --no_init "no" \
         --d_type "real"
